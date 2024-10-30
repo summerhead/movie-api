@@ -64,7 +64,7 @@ app.get('/movies', (req, res) => {
 });
 
 // static request
-app.use(express.static('/documentation.html', 'public'));
+app.use(express.static('public'));
 
 // error handling
 app.use(bodyParser.urlencoded({
