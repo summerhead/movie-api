@@ -4,10 +4,81 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>myFlix</title>
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+            </style>
     </head>
     <body>
         <h1>myFlix</h1>
         <h2>Objective</h2>
         <p>To build the server-side component of a “movies” web application. The web application will provide users with access to information about different movies, directors, and genres. Users will be able to sign up, update their personal information, and create a list of their favorite movies.</p>
+        
+        <h2>Endpoints</h2>
+        <table>
+            <tr>
+                <th>Request</th>
+                <th>URL</th>
+                <th>HTTP Method</th>
+            </tr>
+            <tr>
+                <td>Return a list of ALL movies to the user</td>
+                <td>/movies</td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td>Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user</td>
+                <td>/movies/:title</td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td>Return data about a genre (description) by name/title (e.g., “Thriller”)</td>
+                <td>/movies/genre/:genreName</td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td>Return data about a director (bio, birth year, death year) by name</td>
+                <td>/movies/directors/:directorName</td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td>Allow new users to register</td>
+                <td>/users</td>
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td>Allow users to update their user info (username)</td>
+                <td>/users/:id</td>
+                <td>PUT</td>
+            </tr>
+            <tr>
+                <td>Allow users to add a movie to their list of favorites</td>
+                <td>/users/:id/movies/:movieTitle</td>
+                <td>POST</td>
+            </tr>
+            <tr>
+                <td>Allow users to remove a movie from their list of favorites</td>
+                <td>/users/:id/movies/:movieTitle</td>
+                <td>DELETE</td>
+            </tr>
+            <tr>
+                <td>Allow existing users to deregister</td>
+                <td>/users/:id</td>
+                <td>DELETE</td>
+            </tr>
+        </table>
     </body>
 </html>
