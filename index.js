@@ -119,16 +119,22 @@ app.get('/movies/:Title', async (req, res) => {
         });
 });
 
-// READ the genre of a movie
-app.get('/movies/genre/:genreName', (req, res) => {
-    const { genreName } = req.params;
-    const genre = movies.find( movie => movie.Genre.Name == genreName ).Genre;
-
-    if (genre) {
-        res.status(200).json(genre);
-    } else {
-        res.status(400).send('no such genre')
-    }
+// GET a genre by name
+app.get('/genres/:Name', async (req, res) => {
+    await Movies.findOne({ 'Genre.Name': req.params.Name })
+        .then((genre) => {
+            if (genre) {
+                res.json(genre.Genre);
+            } else {
+                res.status(404).send(
+                    'Genre with the name ' + req.params.Name + ' was not found.'
+                );
+            }
+        })
+        .catch((err) => {
+            console.error(err);
+            res.status(500).send('Error: ' + err);
+        });
 });
 
 // READ the director of a movie
