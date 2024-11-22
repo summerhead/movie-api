@@ -77,7 +77,7 @@ app.post('/users/:Username/movies/:MovieID', async (req, res) => {
     });
   });
 
-// READ
+/*
 app.get('/', (req, res) => {
     res.send('Welcome to my movie club!');
 });
@@ -85,11 +85,19 @@ app.get('/', (req, res) => {
 app.get('/documentation', (req, res) => {
     res.sendFile('public/documentation.html', { root: __dirname });
 });
+*/
 
 // READ list of data about ALL movies
-app.get('/movies', (req, res) => {
-    res.status(200).json(movies);
-});
+app.get('/movies', async (req, res) => {
+    await Movies.find()
+      .then((movies) => {
+        res.status(201).json(movies);
+      })
+      .catch((err) => {
+        console.error(err);
+        res.status(500).send('Error: ' + err);
+      });
+  });
 
 // READ data about a single movie, by title
 app.get('/movies/:title', (req, res) => {
