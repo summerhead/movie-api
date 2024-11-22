@@ -137,16 +137,24 @@ app.get('/genres/:Name', async (req, res) => {
         });
 });
 
-// READ the director of a movie
-app.get('/movies/directors/:directorName', (req, res) => {
-    const { directorName } = req.params;
-    const director = movies.find(movie => movie.Director.Name == directorName).Director;
-
-    if (director) {
-        res.status(200).json(director);
-    } else {
-        res.status(400).send('no such director')
-    }
+// GET director by name
+app.get('/directors/:Name', async (req, res) => {
+    await Movies.findOne({ 'Director.Name': req.params.Name })
+        .then((director) => {
+            if (director) {
+                res.json(director.Director);
+            } else {
+                res.status(404).send(
+                    'Director with the name ' +
+                        req.params.Name +
+                        ' was not found.'
+                );
+            }
+        })
+        .catch((err) => {
+            console.error(err);
+            res.status(500).send('Error: ' + err);
+        });
 });
 
 // DELETE Allow users to remove a movie from their list of favorites
