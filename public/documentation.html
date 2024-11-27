@@ -41,17 +41,22 @@
             </tr>
             <tr>
                 <td>Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user</td>
-                <td>/movies/:title</td>
+                <td>/movies/:Title</td>
                 <td>GET</td>
             </tr>
             <tr>
                 <td>Return data about a genre (description) by name/title (e.g., “Thriller”)</td>
-                <td>/movies/genre/:genreName</td>
+                <td>/genres/:Name</td>
                 <td>GET</td>
             </tr>
             <tr>
                 <td>Return data about a director (bio, birth year, death year) by name</td>
-                <td>/movies/directors/:directorName</td>
+                <td>/directors/:Name</td>
+                <td>GET</td>
+            </tr>
+            <tr>
+                <td>Get list of all users</td>
+                <td>/users</td>
                 <td>GET</td>
             </tr>
             <tr>
@@ -60,23 +65,23 @@
                 <td>POST</td>
             </tr>
             <tr>
-                <td>Allow users to update their user info (username)</td>
-                <td>/users/:id</td>
-                <td>PUT</td>
-            </tr>
-            <tr>
                 <td>Allow users to add a movie to their list of favorites</td>
-                <td>/users/:id/movies/:movieTitle</td>
+                <td>/users/:Username/movies/:MovieID</td>
                 <td>POST</td>
             </tr>
             <tr>
+                <td>Allow users to update their user info (username)</td>
+                <td>/users/:Username</td>
+                <td>PUT</td>
+            </tr>
+            <tr>
                 <td>Allow users to remove a movie from their list of favorites</td>
-                <td>/users/:id/movies/:movieTitle</td>
+                <td>/users/:Username/favorites/:MovieID</td>
                 <td>DELETE</td>
             </tr>
             <tr>
                 <td>Allow existing users to deregister</td>
-                <td>/users/:id</td>
+                <td>/users/:Username</td>
                 <td>DELETE</td>
             </tr>
         </table>
