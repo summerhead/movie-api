@@ -25,6 +25,10 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
+app.use(morgan("common")); 
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true }));
+
 let auth = require('./auth')(app);
 const passport = require('passport');
 require('./passport');
@@ -43,10 +47,6 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`API server running on http://localhost:${port}`);
 });
-
-app.use(morgan('common'));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // static request
 app.use(express.static('public'));
