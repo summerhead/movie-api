@@ -62,8 +62,9 @@ app.get('/', (req, res) => {
 });
 
 // Start the Express server
-app.listen(port, () => {
-  console.log(`API server running on http://localhost:${port}`);
+const port = process.env.PORT || 8080;
+app.listen(port, '0.0.0.0',() => {
+ console.log('Listening on Port ' + port);
 });
 
 // static request
@@ -247,7 +248,7 @@ app.put('/users/:Username',
     })
   });
 
-  
+
 app.get('/', (req, res) => {
     res.send('Welcome to my movie club!');
 });
