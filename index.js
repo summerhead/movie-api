@@ -12,11 +12,11 @@ const Movies = Models.Movie,
     Directors = Models.Director;
 
 const app = express(),
-  port = 8080, // API server runs on port 8080
+  // port = 8080, // API server runs on port 8080
   uuid = require('uuid');
 
 // Connect to MongoDB (on port 27017)
-mongoose.connect('mongodb://localhost:27017/myFlix', {
+mongoose.connect(process.env.CONNECTION_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
