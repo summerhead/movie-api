@@ -11,9 +11,9 @@ const Movies = Models.Movie,
     Genres = Models.Genre,
     Directors = Models.Director;
 
-const app = express(),
-  // port = 8080, // API server runs on port 8080
-  uuid = require('uuid');
+const app = express();
+  // port = 8080, 
+  // uuid = require('uuid');
 
 // Connect to MongoDB (on port 27017)
 mongoose.connect(process.env.CONNECTION_URI, {
