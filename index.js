@@ -71,16 +71,16 @@ app.listen(port, '0.0.0.0',() => {
 app.use(express.static('public'));
 
 // Return a list of ALL movies to the user	
-app.get('/movies', async (req, res) => {
-    await Movies.find()
-      .then((movies) => {
-        res.status(201).json(movies);
-      })
-      .catch((err) => {
-        console.error(err);
-        res.status(500).send('Error: ' + err);
-      });
-  });
+app.get('/movies', passport.authenticate('jwt', {session: false}), async (req, res) => {
+  await Movies.find()
+    .then((movies) => {
+      res.status(201).json(movies);
+    })
+    .catch((err) => {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+    });
+});
 
 // Return data (description, genre, director, image URL, whether it’s featured or not) about a single movie by title to the user	
 app.get('/movies/:Title', passport.authenticate('jwt', { session: false }), async (req, res) => {
