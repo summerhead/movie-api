@@ -1,0 +1,192 @@
+[
+    {
+        "_id": {
+            "$oid": "6737cbc961b737a3b6f6afb2"
+        },
+        "Title": "Chungking Express",
+        "Description": "Two love stories in Hong Kong, connected by a food stall and a shared sense of longing and fate.",
+        "Genre": {
+            "Name": "Drama",
+            "Description": "A genre focused on character-driven stories with emotional themes."
+        },
+        "Director": {
+            "Name": "Wong Kar-wai",
+            "Bio": "A Hong Kong filmmaker known for his visually stylish films, often focused on themes of love and loneliness.",
+            "Birth": "1958-07-17",
+            "Death": null
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BMzQ0ZWExNTgtMWZiNy00ODk0LTk3YWItM2NiNzZhZDUyOTZlXkEyXkFqcGc@._V1_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "6737cd5961b737a3b6f6afb3"
+        },
+        "Title": "Dog Day Afternoon",
+        "Description": "A bank robbery goes wrong, leading to a standoff with police and the media, based on a true story.",
+        "Genre": {
+            "Name": "Crime",
+            "Description": "A genre that focuses on the lives of criminals and the investigation of crimes."
+        },
+        "Director": {
+            "Name": "Sidney Lumet",
+            "Bio": "An American film director, widely recognized for his films addressing social issues.",
+            "Birth": "1924-06-25",
+            "Death": "2011-04-09"
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BNDYzYWMxMmYtZDI4ZC00NmIzLWI2YTUtMWFkZWQ3ZDYxZGViXkEyXkFqcGc@._V1_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "6737cd7561b737a3b6f6afb4"
+        },
+        "Title": "Drop Dead Gorgeous",
+        "Description": "A beauty pageant in a small town becomes a deadly competition full of sabotage and dark humor.",
+        "Genre": {
+            "Name": "Comedy",
+            "Description": "A genre aimed at entertaining and inducing laughter through exaggerated scenarios."
+        },
+        "Director": {
+            "Name": "Martha Coolidge",
+            "Bio": "An American film director known for her work in comedy and drama.",
+            "Birth": "1946-08-17",
+            "Death": null
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BMjA0NDgxOTIzOF5BMl5BanBnXkFtZTcwMDA0MjAyMQ@@._V1_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "6737cd8b61b737a3b6f6afb5"
+        },
+        "Title": "American Movie",
+        "Description": "A documentary following the director of a low-budget horror film and his struggles to finish his passion project.",
+        "Genre": {
+            "Name": "Documentary",
+            "Description": "A genre that presents factual stories and real-life subjects."
+        },
+        "Director": {
+            "Name": "Chris Smith",
+            "Bio": "An American filmmaker and documentary director, known for his work in capturing offbeat stories.",
+            "Birth": "1970-02-13",
+            "Death": null
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BNzBjNjQwMWQtYWE0OC00MmM3LTljNDktMmI4ZTlhMWFjZTYwXkEyXkFqcGc@._V1_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "6737cdaa61b737a3b6f6afb6"
+        },
+        "Title": "Dark City",
+        "Description": "A man with no memory is caught in a mysterious city, plagued by strange experiments and altered realities.",
+        "Genre": {
+            "Name": "Sci-Fi",
+            "Description": "A genre that deals with speculative concepts such as advanced science, technology, and futuristic societies."
+        },
+        "Director": {
+            "Name": "Alex Proyas",
+            "Bio": "An Australian film director, producer, and screenwriter, known for his work in sci-fi and gothic films.",
+            "Birth": "1963-09-23",
+            "Death": null
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BMTFhMmE1YzgtNTFhYS00MTRlLWI3ZDMtMWJkMTBmOWMzOTk5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "6737cdc661b737a3b6f6afb7"
+        },
+        "Title": "Wild Strawberries",
+        "Description": "An elderly professor reflects on his life during a journey through Sweden with his daughter-in-law.",
+        "Genre": {
+            "Name": "Drama",
+            "Description": "A genre focused on character-driven stories with emotional themes."
+        },
+        "Director": {
+            "Name": "Ingmar Bergman",
+            "Bio": "A Swedish film director, widely regarded as one of the greatest filmmakers of all time.",
+            "Birth": "1918-07-14",
+            "Death": "2007-07-30"
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BZWQ5MDllM2EtZWRmNS00MmZiLWI4ZWQtMjRiY2Q5MTAxODY4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "6737cdfe61b737a3b6f6afb8"
+        },
+        "Title": "The Lady Vanishes",
+        "Description": "A young woman uncovers a conspiracy involving a missing elderly lady on a train traveling through Europe.",
+        "Genre": {
+            "Name": "Thriller",
+            "Description": "A genre focused on excitement, suspense, and tension."
+        },
+        "Director": {
+            "Name": "Alfred Hitchcock",
+            "Bio": "An English film director and producer, known as the 'Master of Suspense.'",
+            "Birth": "1899-08-13",
+            "Death": "1980-04-29"
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BMzQxY2M5ODUtYjQ5ZS00M2NmLWI2OTMtYzY3ZWJmZjcyNDIwXkEyXkFqcGc@._V1_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "6737ce1261b737a3b6f6afb9"
+        },
+        "Title": "Saltburn",
+        "Description": "A college student becomes obsessed with his wealthy classmate and infiltrates his family’s extravagant life.",
+        "Genre": {
+            "Name": "Dark Comedy",
+            "Description": "A genre that combines humor with elements of tragedy, often in an exaggerated or absurd way."
+        },
+        "Director": {
+            "Name": "Emerald Fennell",
+            "Bio": "A British film director, screenwriter, and actress, known for her work on darkly comedic films.",
+            "Birth": "1986-10-01",
+            "Death": null
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BZjk4NGE3MWItMDRhMy00YzhiLTk0MGUtZDlkNmQxYWIxYzc2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "6737ce2661b737a3b6f6afba"
+        },
+        "Title": "Night of the Hunter",
+        "Description": "A sinister preacher pursues two children who know the location of a hidden fortune in cash.",
+        "Genre": {
+            "Name": "Thriller",
+            "Description": "A genre focused on excitement, suspense, and tension."
+        },
+        "Director": {
+            "Name": "Charles Laughton",
+            "Bio": "An English actor and director, known for his only film as a director, the 1955 thriller 'Night of the Hunter.'",
+            "Birth": "1899-07-01",
+            "Death": "1962-12-15"
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BZmZmOWEzYjktZWYxMi00MjlmLTlmNTAtMzI4ZDVlZmIxZGIzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "6737ce3761b737a3b6f6afbb"
+        },
+        "Title": "Band of Outsiders",
+        "Description": "Three friends plan a robbery, but things spiral out of control as emotions get in the way.",
+        "Genre": {
+            "Name": "Crime",
+            "Description": "A genre that focuses on the lives of criminals and the investigation of crimes."
+        },
+        "Director": {
+            "Name": "Jean-Luc Godard",
+            "Bio": "A French-Swiss film director and a leading figure in the French New Wave cinema.",
+            "Birth": "1930-12-03",
+            "Death": "2022-09-13"
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BMTU1OTA2MDM4MV5BMl5BanBnXkFtZTgwNDcyMjgwMjE@._V1_.jpg",
+        "Featured": true
+    }
+]
