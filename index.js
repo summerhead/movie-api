@@ -12,8 +12,6 @@ const Movies = Models.Movie,
     Directors = Models.Director;
 
 const app = express();
-  // port = 8080, 
-  // uuid = require('uuid');
 
 // Connect to MongoDB (on port 27017)
 mongoose.connect(process.env.CONNECTION_URI, {
@@ -27,8 +25,8 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 
-app.use(morgan("common")); 
-app.use(express.json()); 
+app.use(morgan("common"));
+app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 const cors = require('cors');
@@ -38,10 +36,10 @@ let allowedOrigins = ['http://localhost:8080', 'http://testsite.com', 'http://lo
 
 app.use(cors({
   origin: (origin, callback) => {
-    if(!origin) return callback(null, true);
-    if(allowedOrigins.indexOf(origin) === -1){ // If a specific origin isn’t found on the list of allowed origins
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) === -1) { // If a specific origin isn’t found on the list of allowed origins
       let message = 'The CORS policy for this application doesn’t allow access from origin ' + origin;
-      return callback(new Error(message ), false);
+      return callback(new Error(message), false);
     }
     return callback(null, true);
   }
@@ -63,11 +61,11 @@ app.get('/', (req, res) => {
 
 // Start the Express server
 const port = process.env.PORT || 8080;
-app.listen(port, '0.0.0.0',() => {
- console.log('Listening on Port ' + port);
+app.listen(port, '0.0.0.0', () => {
+  console.log('Listening on Port ' + port);
 });
 
-// static request
+// Static files
 app.use(express.static('public'));
 
 // CREATE a new user
@@ -267,10 +265,4 @@ app.delete('/users/:Username', passport.authenticate('jwt', { session: false }),
     console.error(err);
     res.status(500).send(`Error: ${err}`);
   }
-});
-
-// Start the server
-const port = process.env.PORT || 8080;
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Listening on Port ${port}`);
 });
