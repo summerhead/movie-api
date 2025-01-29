@@ -1,28 +1,73 @@
-const express = require('express');
-const morgan = require('morgan');
-const uuid = require('uuid');
+const express = require('express'),
+    morgan = require('morgan'),
+    bodyParser = require('body-parser'),
+    mongoose = require('mongoose'),
+    Models = require('./models.js');
+
 const { check, validationResult } = require('express-validator');
-const mongoose = require('mongoose');
-const Models = require('./models.js');
-const passport = require('passport');
-const cors = require('cors');
-require('./passport');
-let auth = require('./auth')(app); // Ensure that the auth function is properly initialized
 
-const Movies = Models.Movie;
-const Users = Models.User;
-
-mongoose.connect(process.env.CONNECTION_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+const Movies = Models.Movie,
+    Users = Models.User,
+    Genres = Models.Genre,
+    Directors = Models.Director;
 
 const app = express();
+  // port = 8080, 
+  // uuid = require('uuid');
 
-// Middleware setup
-app.use(express.json());
+// Connect to MongoDB (on port 27017)
+mongoose.connect(process.env.CONNECTION_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.log('Error connecting to MongoDB:', err));
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+app.use(morgan("common")); 
+app.use(express.json()); 
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
-app.use(morgan('combined'));
 
-// Serve static files
+const cors = require('cors');
+app.use(cors());
+
+let allowedOrigins = ['http://localhost:8080', 'http://testsite.com', 'http://localhost:1234'];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if(!origin) return callback(null, true);
+    if(allowedOrigins.indexOf(origin) === -1){ // If a specific origin isn’t found on the list of allowed origins
+      let message = 'The CORS policy for this application doesn’t allow access from origin ' + origin;
+      return callback(new Error(message ), false);
+    }
+    return callback(null, true);
+  }
+}));
+
+let auth = require('./auth')(app);
+const passport = require('passport');
+require('./passport');
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something broke!');
+});
+
+// Define a simple route for testing
+app.get('/', (req, res) => {
+  res.send('Hello from the API!');
+});
+
+// Start the Express server
+const port = process.env.PORT || 8080;
+app.listen(port, '0.0.0.0',() => {
+ console.log('Listening on Port ' + port);
+});
+
+// static request
 app.use(express.static('public'));
 
 // CREATE a new user
