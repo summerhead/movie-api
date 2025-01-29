@@ -70,6 +70,22 @@ app.listen(port, '0.0.0.0',() => {
 // static request
 app.use(express.static('public'));
 
+// Route to get a specific user by Username
+app.get('/users/:Username', passport.authenticate('jwt', { session: false }), async (req, res) => {
+  const { Username } = req.params;  // Get the username from URL parameters
+  try {
+      const user = await Users.findOne({ Username });
+      if (user) {
+          res.json(user);  // Send the user data as a response
+      } else {
+          res.status(404).send('User with the username ' + Username + ' was not found.');
+      }
+  } catch (err) {
+      console.error(err);
+      res.status(500).send('Error: ' + err);
+  }
+});
+
 // Return a list of ALL movies to the user	
 app.get('/movies', passport.authenticate('jwt', {session: false}), async (req, res) => {
   await Movies.find()
