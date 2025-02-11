@@ -39,63 +39,6 @@
     },
     {
         "_id": {
-            "$oid": "6737cd7561b737a3b6f6afb4"
-        },
-        "Title": "Drop Dead Gorgeous",
-        "Description": "A beauty pageant in a small town becomes a deadly competition full of sabotage and dark humor.",
-        "Genre": {
-            "Name": "Comedy",
-            "Description": "A genre aimed at entertaining and inducing laughter through exaggerated scenarios."
-        },
-        "Director": {
-            "Name": "Martha Coolidge",
-            "Bio": "An American film director known for her work in comedy and drama.",
-            "Birth": "1946-08-17",
-            "Death": null
-        },
-        "ImagePath": "https://m.media-amazon.com/images/M/MV5BMjA0NDgxOTIzOF5BMl5BanBnXkFtZTcwMDA0MjAyMQ@@._V1_.jpg",
-        "Featured": true
-    },
-    {
-        "_id": {
-            "$oid": "6737cd8b61b737a3b6f6afb5"
-        },
-        "Title": "American Movie",
-        "Description": "A documentary following the director of a low-budget horror film and his struggles to finish his passion project.",
-        "Genre": {
-            "Name": "Documentary",
-            "Description": "A genre that presents factual stories and real-life subjects."
-        },
-        "Director": {
-            "Name": "Chris Smith",
-            "Bio": "An American filmmaker and documentary director, known for his work in capturing offbeat stories.",
-            "Birth": "1970-02-13",
-            "Death": null
-        },
-        "ImagePath": "https://m.media-amazon.com/images/M/MV5BNzBjNjQwMWQtYWE0OC00MmM3LTljNDktMmI4ZTlhMWFjZTYwXkEyXkFqcGc@._V1_.jpg",
-        "Featured": true
-    },
-    {
-        "_id": {
-            "$oid": "6737cdaa61b737a3b6f6afb6"
-        },
-        "Title": "Dark City",
-        "Description": "A man with no memory is caught in a mysterious city, plagued by strange experiments and altered realities.",
-        "Genre": {
-            "Name": "Sci-Fi",
-            "Description": "A genre that deals with speculative concepts such as advanced science, technology, and futuristic societies."
-        },
-        "Director": {
-            "Name": "Alex Proyas",
-            "Bio": "An Australian film director, producer, and screenwriter, known for his work in sci-fi and gothic films.",
-            "Birth": "1963-09-23",
-            "Death": null
-        },
-        "ImagePath": "https://m.media-amazon.com/images/M/MV5BMTFhMmE1YzgtNTFhYS00MTRlLWI3ZDMtMWJkMTBmOWMzOTk5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-        "Featured": true
-    },
-    {
-        "_id": {
             "$oid": "6737cdc661b737a3b6f6afb7"
         },
         "Title": "Wild Strawberries",
@@ -187,6 +130,63 @@
             "Death": "2022-09-13"
         },
         "ImagePath": "https://m.media-amazon.com/images/M/MV5BMTU1OTA2MDM4MV5BMl5BanBnXkFtZTgwNDcyMjgwMjE@._V1_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "67aad89eae9e76a85dd13086"
+        },
+        "Title": "Jackie Brown",
+        "Description": "A flight attendant becomes entangled in a web of crime and betrayal after being caught smuggling money for an arms dealer.",
+        "Genre": {
+            "Name": "Crime",
+            "Description": "A genre that revolves around criminal activities, including theft, deception, and law enforcement."
+        },
+        "Director": {
+            "Name": "Quentin Tarantino",
+            "Bio": "An American filmmaker known for his nonlinear storytelling, sharp dialogue, and stylish violence. Tarantino's work includes films like Pulp Fiction and Kill Bill.",
+            "Birth": "1963-03-27",
+            "Death": null
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BZmUxZjY3MDktNGI5NS00MTQ5LWE0YWItZWQzNmZhNjhkZDYyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "67aadac6ae9e76a85dd13087"
+        },
+        "Title": "Blue Velvet",
+        "Description": "A young man becomes involved in a seedy and disturbing mystery after discovering a severed ear in a suburban neighborhood, leading him into a dark world of crime and perversion.",
+        "Genre": {
+            "Name": "Mystery",
+            "Description": "A genre focused on solving a crime or uncovering hidden secrets, often involving detectives or ordinary individuals thrust into extraordinary situations."
+        },
+        "Director": {
+            "Name": "David Lynch",
+            "Bio": "An American filmmaker and visual artist, known for his surreal, dreamlike storytelling and explorations of the darker aspects of human nature. Lynch’s other works include *Twin Peaks* and *Mulholland Drive*.",
+            "Birth": "1946-01-20",
+            "Death": null
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BMjM2OTk3Nzc2MV5BMl5BanBnXkFtZTgwMTUxNDMyODE@._V1_QL75_UX820_.jpg",
+        "Featured": true
+    },
+    {
+        "_id": {
+            "$oid": "67aadc20ae9e76a85dd13088"
+        },
+        "Title": "I Live in Fear",
+        "Description": "A man obsessed with the fear of nuclear war becomes increasingly paranoid and tries to relocate his family to a safer place, leading to tension and conflict with those around him.",
+        "Genre": {
+            "Name": "Drama",
+            "Description": "A genre that focuses on emotional, interpersonal, and often serious themes, examining characters’ complex relationships and moral dilemmas."
+        },
+        "Director": {
+            "Name": "Akira Kurosawa",
+            "Bio": "A Japanese filmmaker regarded as one of the greatest in cinematic history. His works, including *Seven Samurai* and *Rashomon*, have had a profound influence on both Japanese cinema and the global film industry.",
+            "Birth": "1910-03-23",
+            "Death": "1998-09-06"
+        },
+        "ImagePath": "https://m.media-amazon.com/images/M/MV5BMTk2NTA0MTk3NF5BMl5BanBnXkFtZTYwMTE5Mzc5._V1_.jpg",
         "Featured": true
     }
 ]
